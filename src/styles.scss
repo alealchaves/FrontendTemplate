@@ -1,0 +1,74 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.inputinvalid {
+  border-top: none;  
+  border-left: none;  
+  border-right: none;  
+  border-bottom: 1px solid;  
+  border-color: rgb(235, 62, 10);
+}
+
+.inputvalid {
+  border-top: none;  
+  border-left: none;  
+  border-right: none;  
+  border-bottom: 1px solid;  
+  border-color: rgb(138, 235, 10);
+}
+
+input {
+    border-top: none;  
+    border-left: none;  
+    border-right: none;  
+    border-bottom: 1px solid;  
+    border-color: rgb(15, 117, 124);
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .content {
+    display: flex;
+    margin: 70px 1px 1px 1px;
+    padding: 13px 13px;
+    max-width: 960px;
+    flex-direction: column;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;    
+    margin-top: 8px;    
+  }
+
+  .card-container label {
+    font-size: 17px;
+    color: rgb(15, 117, 124);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    
+  }
+
+ .card-container button {
+    border-color: rgb(15, 117, 124);
+    font-size: 15px;
+    border-radius: 6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:white;
+    cursor: pointer;    
+  }
+

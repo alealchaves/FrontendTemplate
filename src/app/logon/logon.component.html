@@ -1,0 +1,45 @@
+
+<div class="content"> 
+    
+    <form class="form" [formGroup]="logonModel">
+
+    <div class="card-container">
+    
+      <label type="label">E-Mail&nbsp;</label>
+      
+    </div>
+  
+    <div class="card-container">
+    
+      <input type="email" formControlName="email" 
+      [class.inputinvalid]="this.logonModel?.controls['email'].invalid && this.logonModel?.controls['email'].touched"
+      [class.inputvalid]="this.logonModel?.controls['email'].valid" />
+      
+    </div>
+  
+    <div class="card-container">
+    
+      <label type="label">Senha&nbsp;</label>
+    
+    </div>
+  
+    <div class="card-container">
+    
+      <input type="password"
+       formControlName="senha"
+       [class.inputinvalid]="this.logonModel?.controls['senha'].invalid && this.logonModel?.controls['senha'].touched"
+       [class.inputvalid]="this.logonModel?.controls['senha'].valid"/>    
+    </div>
+    
+    <div class="card-container">
+    
+      <button [disabled]="!logonModel.valid" (click)="logar();">Logar</button>
+      &nbsp;
+      <button (click)="limpar();">Limpar</button>
+  
+    </div>
+  
+    </form>
+    
+  </div>
+  

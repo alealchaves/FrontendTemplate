@@ -1,0 +1,32 @@
+<div class="content">
+
+  <div class="card-container">
+
+    <label type="label" id="email">E-mail&nbsp;</label>
+
+  </div>
+
+  <div class="card-container">
+
+    <input type="email" name="email" for="email" (change)="change();"
+     [(ngModel)]="email" (ngModelChange)="modelChangeFn($event)" />
+
+  </div>
+  <bR>
+  <table class="table" *ngIf="usuarios" style="text-align:center">
+    <thead>
+      <tr class="table-primary" >
+        <th>Nome</th>
+        <th>E-mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <th scope="row" hidden>{{usuario.hash}}</th>
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

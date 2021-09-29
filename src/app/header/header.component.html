@@ -1,0 +1,21 @@
+<div class="toolbar">
+
+    <h2 *ngIf="!logon" class="titulo">Template</h2>
+
+    <div *ngIf="logon" class="titulo">
+    
+        <label type="label">{{emailUsuario}}</label>
+
+    </div>
+
+    <div *ngIf="logon" class="acessos">
+    
+        <div>
+            <label *ngIf="permissaoUsuario" (click)="usuarioFEvent();">Cadastro de Usuários</label>
+            |
+            <label (click)="sair();">Sair</label>
+        </div>
+
+    </div>
+
+</div>
