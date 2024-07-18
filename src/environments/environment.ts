@@ -9,6 +9,9 @@ export const environment = {
     },
     usuario: {
       get: `${baseUrl}/usuario/listar`,
+    },
+    perfil: {
+      get: `${baseUrl}/perfil/listar`,
     }
   }
 }

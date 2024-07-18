@@ -27,6 +27,7 @@ export class RequestInterceptor implements HttpInterceptor {
     //}
     }
 
+    console.log( `Bearer ${logon.token}` );
     
     let headers = request.headers
                     .set('Content-Type', 'application/json')

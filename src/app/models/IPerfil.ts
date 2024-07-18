@@ -1,5 +1,5 @@
 export interface IPerfil {
-    usuarioId: number,
-    perfilId: number
+    id: number,
+    nome: string
   }
   

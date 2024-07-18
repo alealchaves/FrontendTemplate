@@ -13,11 +13,18 @@
 
   </div>
   <bR>
+    <div class="card-container">
+
+      <button (click)="novo();">Novo</button>
+  
+    </div>
+    <bR>
   <table class="table" *ngIf="usuarios" style="text-align:center">
     <thead>
       <tr class="table-primary" >
         <th>Nome</th>
         <th>E-mail</th>
+        <th>Perfil</th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +32,7 @@
         <th scope="row" hidden>{{usuario.hash}}</th>
         <td>{{usuario.nome}}</td>
         <td>{{usuario.email}}</td>
+        <td>{{usuario.perfil}}</td>
       </tr>
     </tbody>
   </table>

@@ -20,13 +20,18 @@ const routes: Routes = [
     path: 'usuario',
     loadChildren: async() => (await import('./usuario/usuario.module')).UsuarioModule,
     canActivate: [AuthGuardService]
-  }
+  },
+  {
+    path: 'usuarioCadastro',
+    loadChildren: async() => (await import('./usuario/usuario-cadastro/usuario-cadastro.module')).UsuarioCadastroModule,
+    canActivate: [AuthGuardService]
+  },
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, 
-      { preloadingStrategy: PreloadAllModules,
+      { preloadingStrategy: PreloadAllModules, useHash:false,
         enableTracing: true })
   ],
   exports: [RouterModule]

@@ -22,7 +22,7 @@ export class HeaderComponent implements AfterViewInit {
 
     if (this.logon){
       this.emailUsuario = this.logon.usuario.email;
-      this.permissaoUsuario = this.logon.usuario.usuarioPerfis.findIndex(p => p.perfilId == 3) > -1;
+      this.permissaoUsuario = this.logon.usuario.usuarioPerfis.findIndex(p => p.key.toString() == "3") > -1;
     }
   }
 

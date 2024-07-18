@@ -1,0 +1,61 @@
+<div class="content">
+
+    <form class="form" [formGroup]="usuarioModel">
+
+        <div class="card-container">
+
+            <label type="label">Perfil&nbsp;</label>
+                <select class="form-control" formControlName="perfil"
+                    [class.inputinvalid]="this.usuarioModel?.controls['perfil'].invalid && this.usuarioModel?.controls['perfil'].touched"
+                    [class.inputvalid]="this.usuarioModel?.controls['perfil'].valid">
+                    <option *ngFor="let perfil of (perfis | async)" [value]="perfil.id">
+                        {{perfil.nome}}
+                    </option>
+                </select>
+
+        </div>
+
+        <div class="card-container">
+
+            <label type="label">Nome&nbsp;</label>
+            <input type="text" formControlName="nome"
+                [class.inputinvalid]="this.usuarioModel?.controls['nome'].invalid && this.usuarioModel?.controls['nome'].touched"
+                [class.inputvalid]="this.usuarioModel?.controls['nome'].valid" />
+
+        </div>
+
+        <div class="card-container">
+
+            <label type="label">CPF&nbsp;</label>
+            <input type="text" formControlName="cpf"
+                [class.inputinvalid]="this.usuarioModel?.controls['cpf'].invalid && this.usuarioModel?.controls['cpf'].touched"
+                [class.inputvalid]="this.usuarioModel?.controls['cpf'].valid" />
+
+        </div>
+
+        <div class="card-container">
+
+            <label type="label">E-Mail&nbsp;</label>
+            <input type="email" formControlName="email"
+                [class.inputinvalid]="this.usuarioModel?.controls['email'].invalid && this.usuarioModel?.controls['email'].touched"
+                [class.inputvalid]="this.usuarioModel?.controls['email'].valid" />
+
+        </div>
+
+        <div class="card-container">
+
+            <label type="label">Senha&nbsp;</label>
+            <input type="password" formControlName="senha"
+                [class.inputinvalid]="this.usuarioModel?.controls['senha'].invalid && this.usuarioModel?.controls['senha'].touched"
+                [class.inputvalid]="this.usuarioModel?.controls['senha'].valid" />
+        </div>
+
+        <div class="card-container">
+
+            <button [disabled]="!usuarioModel.valid" (click)="Salvar();">Salvar</button>
+
+        </div>
+
+    </form>
+
+</div>

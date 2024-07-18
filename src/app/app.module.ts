@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxUiLoaderConfig, NgxUiLoaderModule, PB_DIRECTION, POSITION, SPINNER } from  'ngx-ui-loader';
 import { UsuarioModule } from './usuario/usuario.module';
+import { UsuarioCadastroModule } from './usuario/usuario-cadastro/usuario-cadastro.module';
 import { UsuarioService } from './services/usuario.service';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
@@ -28,13 +28,14 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    
     HttpClientModule,
     Interceptor,
     AppRoutingModule,
     HeaderModule,
     LogonModule,
     UsuarioModule,
+    UsuarioCadastroModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig)

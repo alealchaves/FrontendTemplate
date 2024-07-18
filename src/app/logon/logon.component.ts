@@ -42,7 +42,7 @@ export class LogonComponent implements OnDestroy {
     }
   }
   
-  async logar() {
+  logar() {
     
     this.loader.start();
 
@@ -50,7 +50,7 @@ export class LogonComponent implements OnDestroy {
     
     this.subscriptions.push(
     
-      await this.oauthService.logar(this.logonRequest).subscribe(res => {
+      this.oauthService.logar(this.logonRequest).subscribe(res => {
         
     }, (err) => {
 
