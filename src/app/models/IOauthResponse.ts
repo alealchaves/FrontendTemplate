@@ -1,7 +1,7 @@
-import { IUsuario } from "./IUsuario";
+import { IUsuarioResponse } from "./IUsuarioResponse";
 
 export interface IOauthResponse {
     token?: string,
-    usuario: IUsuario
+    usuario: IUsuarioResponse
   }
   

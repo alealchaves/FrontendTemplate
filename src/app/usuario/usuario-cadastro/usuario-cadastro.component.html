@@ -5,6 +5,11 @@
         <div class="card-container">
 
             <label type="label">Perfil&nbsp;</label>
+        
+        </div>
+
+        <div class="card-container">
+        
                 <select class="form-control" formControlName="perfil"
                     [class.inputinvalid]="this.usuarioModel?.controls['perfil'].invalid && this.usuarioModel?.controls['perfil'].touched"
                     [class.inputvalid]="this.usuarioModel?.controls['perfil'].valid">
@@ -18,6 +23,11 @@
         <div class="card-container">
 
             <label type="label">Nome&nbsp;</label>
+
+        </div>
+
+        <div class="card-container">
+
             <input type="text" formControlName="nome"
                 [class.inputinvalid]="this.usuarioModel?.controls['nome'].invalid && this.usuarioModel?.controls['nome'].touched"
                 [class.inputvalid]="this.usuarioModel?.controls['nome'].valid" />
@@ -27,6 +37,11 @@
         <div class="card-container">
 
             <label type="label">CPF&nbsp;</label>
+
+        </div>
+
+        <div class="card-container">
+
             <input type="text" formControlName="cpf"
                 [class.inputinvalid]="this.usuarioModel?.controls['cpf'].invalid && this.usuarioModel?.controls['cpf'].touched"
                 [class.inputvalid]="this.usuarioModel?.controls['cpf'].valid" />
@@ -36,6 +51,11 @@
         <div class="card-container">
 
             <label type="label">E-Mail&nbsp;</label>
+
+        </div>
+
+        <div class="card-container">
+
             <input type="email" formControlName="email"
                 [class.inputinvalid]="this.usuarioModel?.controls['email'].invalid && this.usuarioModel?.controls['email'].touched"
                 [class.inputvalid]="this.usuarioModel?.controls['email'].valid" />
@@ -45,6 +65,11 @@
         <div class="card-container">
 
             <label type="label">Senha&nbsp;</label>
+
+        </div>
+
+        <div class="card-container">
+
             <input type="password" formControlName="senha"
                 [class.inputinvalid]="this.usuarioModel?.controls['senha'].invalid && this.usuarioModel?.controls['senha'].touched"
                 [class.inputvalid]="this.usuarioModel?.controls['senha'].valid" />

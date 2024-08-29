@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
 import { IServiceResult } from '../models/IServiceResult';
 import { KeyValue } from '@angular/common';
 import { IKeyValue } from '../models/IKeyValue';
-import { IPerfil } from '../models/IPerfil';
+import { IPerfilResponse } from '../models/IPerfilResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -20,10 +20,10 @@ export class PerfilService {
 
   }
 
-  public select(): Observable<IServiceResult<Array<IPerfil>>> {
+  public select(): Observable<IServiceResult<Array<IPerfilResponse>>> {
 
       var result = this.http
-      .post<IServiceResult<Array<IPerfil>>>(this.url.get, {});
+      .post<IServiceResult<Array<IPerfilResponse>>>(this.url.get, {});
 
       return result;
   }

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ILogon } from '../models/ILogon';
+import { IUsuarioLoginRequest } from '../models/IUsuarioLoginRequest';
 import { IOauthResponse } from '../models/IOauthResponse';
 import { IServiceResult } from '../models/IServiceResult';
 import { map } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class OauthService {
 
   }
 
-  public logar(logonRequest: ILogon): 
+  public logar(logonRequest: IUsuarioLoginRequest): 
     Observable<IServiceResult<IOauthResponse>> {
 
       localStorage.setItem('culture', 'pt-BR');

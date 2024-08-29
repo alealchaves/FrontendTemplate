@@ -1,13 +1,13 @@
 <div ngxUiLoaderBlurred>
 
-<app-header (deslogou)="deslogou($event)" (usuarioEvent)="usuarioFEvent($event)"></app-header>
+<app-header (deslogou)="deslogou($event)" ></app-header>
+
 <div *ngIf="!logon">
     <app-logon (logou)="logou($event)"></app-logon>
 </div>
-<div *ngIf="mostrarUsuario">
-    <app-usuario></app-usuario>
+
 </div>
-</div>
+
 <ngx-ui-loader></ngx-ui-loader>
 
 <router-outlet></router-outlet>

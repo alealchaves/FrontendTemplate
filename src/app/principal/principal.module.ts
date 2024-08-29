@@ -1,18 +1,18 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { UsuarioRoutingModule } from './usuario-routing.module';
-import { UsuarioComponent } from './usuario.component';
+import { PrincipalRoutingModule } from './principal-routing.module';
+import { PrincipalComponent } from './principal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [UsuarioComponent],
+  declarations: [PrincipalComponent],
   imports: [
     CommonModule,
-    UsuarioRoutingModule,
+    PrincipalRoutingModule,
     FormsModule, ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports: [UsuarioComponent]
+  exports: [PrincipalComponent]
 })
-export class UsuarioModule { }
+export class PrincipalModule { }

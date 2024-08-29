@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, OnInit, Simp
 import { ToastrService } from 'ngx-toastr';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { Subscription } from 'rxjs';
-import { IUsuario } from '../models/IUsuario';
+import { IUsuarioResponse } from '../models/IUsuarioResponse';
 import { OauthService } from '../services/oauth.service';
 import { UsuarioService } from '../services/usuario.service';
 import { Router } from '@angular/router';
@@ -14,8 +14,8 @@ import { Router } from '@angular/router';
 })
 export class UsuarioComponent implements OnInit, OnDestroy, OnChanges {
 
-  public usuarios: Array<IUsuario> = [];
-  public usuariosTemp: Array<IUsuario> = [];
+  public usuarios: Array<IUsuarioResponse> = [];
+  public usuariosTemp: Array<IUsuarioResponse> = [];
   private subscriptions = Array<Subscription>();
   @Input() email: string = 'ok';
   

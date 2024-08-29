@@ -7,7 +7,7 @@ import { Observable, Subscription } from 'rxjs';
 import { IError } from '../../models/IError';
 import { PerfilService } from 'src/app/services/perfil.service';
 import { IKeyValue } from 'src/app/models/IKeyValue';
-import { IPerfil } from 'src/app/models/IPerfil';
+import { IPerfilResponse } from 'src/app/models/IPerfilResponse';
 import { IServiceResult } from 'src/app/models/IServiceResult';
 import { catchError, map } from 'rxjs/operators';
 
@@ -20,7 +20,7 @@ export class UsuarioCadastroComponent implements OnInit, OnDestroy {
 
   public usuarioModel: FormGroup | undefined;
   private subscriptions = Array<Subscription>();
-  public perfis: Observable<Array<IPerfil>> | undefined;
+  public perfis: Observable<Array<IPerfilResponse>> | undefined;
  
   constructor(private router: Router,
     private formBuilder: FormBuilder,

@@ -17,6 +17,11 @@ const routes: Routes = [
     loadChildren: async() => (await import('./logon/logon.module')).LogonModule
   },
   {
+    path: 'principal',
+    loadChildren: async() => (await import('./principal/principal.module')).PrincipalModule,
+    canActivate: [AuthGuardService]
+  },
+  {
     path: 'usuario',
     loadChildren: async() => (await import('./usuario/usuario.module')).UsuarioModule,
     canActivate: [AuthGuardService]

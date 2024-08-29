@@ -12,6 +12,7 @@ import { NgxUiLoaderConfig, NgxUiLoaderModule, PB_DIRECTION, POSITION, SPINNER }
 import { UsuarioModule } from './usuario/usuario.module';
 import { UsuarioCadastroModule } from './usuario/usuario-cadastro/usuario-cadastro.module';
 import { UsuarioService } from './services/usuario.service';
+import { PrincipalModule } from './principal/principal.module';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: "orange",
@@ -35,6 +36,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     HeaderModule,
     LogonModule,
     UsuarioModule,
+    PrincipalModule,
     UsuarioCadastroModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),

@@ -11,43 +11,46 @@ import { OauthService } from './services/oauth.service';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements AfterViewInit  {
+export class AppComponent implements AfterViewInit {
   title = 'FrontendTemplate';
 
-  public logon :IOauthResponse | undefined;
-  public mostrarUsuario : boolean = false;
+  public logon: IOauthResponse | undefined;
+  public mostrarUsuario: boolean = false;
 
   constructor(
     private oauthService: OauthService,
     private router: Router,
-    private loader: NgxUiLoaderService) {     
+    private loader: NgxUiLoaderService) {
 
-      this.loader.startBackground();
-      this.logon = this.oauthService.getLogon();
-        
+    this.loader.startBackground();
+    this.logon = this.oauthService.getLogon();
+
   }
-  
+
   ngAfterViewInit() {
     this.loader.stopBackground();
-  }  
-
-  logou(output: boolean){
-    if (output) {
-      window.location.reload();
-    }
   }
 
-  deslogou(output: boolean){
+  logou(output: boolean) {
+    if (output) {
+      this.router.navigate(['principal']);
+
+      setInterval(() => {
+        window.location.reload();
+      }, 1000)
+    }
+
+
+  }
+
+
+  deslogou(output: boolean) {
     if (output) {
       this.oauthService.removerLogonStorage();
       window.location.reload();
     }
   }
 
-  usuarioFEvent(output: boolean){
-    if (output) {
-      this.mostrarUsuario = true;
-    }
-  }
+
 }
 

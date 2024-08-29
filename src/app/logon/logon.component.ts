@@ -5,7 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { Subscription } from 'rxjs';
 import { IError } from '../models/IError';
-import { ILogon } from '../models/ILogon';
+import { IUsuarioLoginRequest } from '../models/IUsuarioLoginRequest';
 import { OauthService } from '../services/oauth.service';
 
 @Component({
@@ -16,7 +16,7 @@ import { OauthService } from '../services/oauth.service';
 export class LogonComponent implements OnDestroy {
   
   public logonModel: FormGroup | undefined;
-  private logonRequest!: ILogon;
+  private logonRequest!: IUsuarioLoginRequest;
   private subscriptions = Array<Subscription>();
   @Output() logou : EventEmitter<boolean> = new EventEmitter();
 

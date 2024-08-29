@@ -1,4 +1,4 @@
-export interface IPerfil {
+export interface IPerfilResponse {
     id: number,
     nome: string
   }

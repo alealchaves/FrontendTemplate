@@ -1,7 +1,6 @@
 import { IKeyValue } from "./IKeyValue";
-import { IPerfil } from "./IPerfil";
 
-export interface IUsuario {
+export interface IUsuarioResponse {
     nome: string,
     cpf: string,
     email: string,
