@@ -67,7 +67,7 @@ export class UsuarioComponent implements OnInit, OnDestroy, OnChanges {
     //só acontece qdo é alterado pelo parent
   }
 
-  modelChangeFn(){
+  modelChangeFn(event:any){
     if (this.email != ''){
       
       this.usuarios = this.usuarios?.filter(usu => usu.email.includes(this.email));

@@ -18,7 +18,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class UsuarioCadastroComponent implements OnInit, OnDestroy {
 
-  public usuarioModel: FormGroup | undefined;
+  public usuarioModel!: FormGroup;
   private subscriptions = Array<Subscription>();
   public perfis: Observable<Array<IPerfilResponse>> | undefined;
  

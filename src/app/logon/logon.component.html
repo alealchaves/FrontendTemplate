@@ -12,8 +12,8 @@
     <div class="card-container">
     
       <input type="email" formControlName="email" 
-      [class.inputinvalid]="this.logonModel?.controls['email'].invalid && this.logonModel?.controls['email'].touched"
-      [class.inputvalid]="this.logonModel?.controls['email'].valid" />
+      [class.inputinvalid]="this.logonModel.controls['email'].invalid && this.logonModel.controls['email'].touched"
+      [class.inputvalid]="this.logonModel.controls['email'].valid" />
       
     </div>
   
@@ -27,8 +27,8 @@
     
       <input type="password"
        formControlName="senha"
-       [class.inputinvalid]="this.logonModel?.controls['senha'].invalid && this.logonModel?.controls['senha'].touched"
-       [class.inputvalid]="this.logonModel?.controls['senha'].valid"/>    
+       [class.inputinvalid]="this.logonModel.controls['senha'].invalid && this.logonModel.controls['senha'].touched"
+       [class.inputvalid]="this.logonModel.controls['senha'].valid"/>    
     </div>
     
     <div class="card-container">

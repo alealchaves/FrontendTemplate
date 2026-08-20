@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core/';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { LogonRoutingModule } from './logon-routing.module';
 import { LogonComponent } from './logon.component';
 import { validacaoCampoDirective } from '../directives/validacaocampo.directive';

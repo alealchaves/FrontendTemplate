@@ -11,8 +11,8 @@
         <div class="card-container">
         
                 <select class="form-control" formControlName="perfil"
-                    [class.inputinvalid]="this.usuarioModel?.controls['perfil'].invalid && this.usuarioModel?.controls['perfil'].touched"
-                    [class.inputvalid]="this.usuarioModel?.controls['perfil'].valid">
+                    [class.inputinvalid]="this.usuarioModel.controls['perfil'].invalid && this.usuarioModel.controls['perfil'].touched"
+                    [class.inputvalid]="this.usuarioModel.controls['perfil'].valid">
                     <option *ngFor="let perfil of (perfis | async)" [value]="perfil.id">
                         {{perfil.nome}}
                     </option>
@@ -29,8 +29,8 @@
         <div class="card-container">
 
             <input type="text" formControlName="nome"
-                [class.inputinvalid]="this.usuarioModel?.controls['nome'].invalid && this.usuarioModel?.controls['nome'].touched"
-                [class.inputvalid]="this.usuarioModel?.controls['nome'].valid" />
+                [class.inputinvalid]="this.usuarioModel.controls['nome'].invalid && this.usuarioModel.controls['nome'].touched"
+                [class.inputvalid]="this.usuarioModel.controls['nome'].valid" />
 
         </div>
 
@@ -43,8 +43,8 @@
         <div class="card-container">
 
             <input type="text" formControlName="cpf"
-                [class.inputinvalid]="this.usuarioModel?.controls['cpf'].invalid && this.usuarioModel?.controls['cpf'].touched"
-                [class.inputvalid]="this.usuarioModel?.controls['cpf'].valid" />
+                [class.inputinvalid]="this.usuarioModel.controls['cpf'].invalid && this.usuarioModel.controls['cpf'].touched"
+                [class.inputvalid]="this.usuarioModel.controls['cpf'].valid" />
 
         </div>
 
@@ -57,8 +57,8 @@
         <div class="card-container">
 
             <input type="email" formControlName="email"
-                [class.inputinvalid]="this.usuarioModel?.controls['email'].invalid && this.usuarioModel?.controls['email'].touched"
-                [class.inputvalid]="this.usuarioModel?.controls['email'].valid" />
+                [class.inputinvalid]="this.usuarioModel.controls['email'].invalid && this.usuarioModel.controls['email'].touched"
+                [class.inputvalid]="this.usuarioModel.controls['email'].valid" />
 
         </div>
 
@@ -71,13 +71,13 @@
         <div class="card-container">
 
             <input type="password" formControlName="senha"
-                [class.inputinvalid]="this.usuarioModel?.controls['senha'].invalid && this.usuarioModel?.controls['senha'].touched"
-                [class.inputvalid]="this.usuarioModel?.controls['senha'].valid" />
+                [class.inputinvalid]="this.usuarioModel.controls['senha'].invalid && this.usuarioModel.controls['senha'].touched"
+                [class.inputvalid]="this.usuarioModel.controls['senha'].valid" />
         </div>
 
         <div class="card-container">
 
-            <button [disabled]="!usuarioModel.valid" (click)="Salvar();">Salvar</button>
+            <button [disabled]="!usuarioModel.valid">Salvar</button>
 
         </div>
 

@@ -15,7 +15,7 @@ import { OauthService } from '../services/oauth.service';
 })
 export class LogonComponent implements OnDestroy {
   
-  public logonModel: FormGroup | undefined;
+  public logonModel!: FormGroup;
   private logonRequest!: IUsuarioLoginRequest;
   private subscriptions = Array<Subscription>();
   @Output() logou : EventEmitter<boolean> = new EventEmitter();
