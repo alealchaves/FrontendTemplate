@@ -1,4 +1,4 @@
-const baseUrl: string = 'https://localhost:44339/api'
+const baseUrl: string = 'https://localhost:5001/api'
 
 export const environment = {
   baseUrl,

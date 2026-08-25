@@ -1,13 +1,15 @@
-<div ngxUiLoaderBlurred>
+<div ngxUiLoaderBlurred class="app-container">
 
-<app-header (deslogou)="deslogou($event)" ></app-header>
+  <app-header (deslogou)="deslogou($event)"></app-header>
 
-<div *ngIf="!logon">
-    <app-logon (logou)="logou($event)"></app-logon>
-</div>
+  <main class="main-content">
+    <div *ngIf="!logon" class="logon-wrapper">
+      <app-logon (logou)="logou($event)"></app-logon>
+    </div>
+
+    <router-outlet></router-outlet>
+  </main>
 
 </div>
 
 <ngx-ui-loader></ngx-ui-loader>
-
-<router-outlet></router-outlet>
